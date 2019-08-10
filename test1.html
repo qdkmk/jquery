@@ -1,0 +1,19 @@
+<button>表示</button>
+<div></div>
+	
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(function(){
+  $("button").click(function(){
+    $("div").toggle("slow");
+  });
+});
+</script>
+<style>
+div{
+  width:200px;
+  height:200px;
+  background:red;
+  display:none;
+}
+</style>
