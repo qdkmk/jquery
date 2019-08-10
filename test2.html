@@ -1,0 +1,83 @@
+<html>
+<table>
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Phone</th>
+    <th>Mail</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>YAMADA</td>
+    <td>19900101</td>
+    <td>000-111-1111</td>
+    <td>ex@ex.com</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>SATOU</td>
+    <td>19900101</td>
+    <td>222-222-2222</td>
+    <td>ex2@ex.com</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>KIMURA</td>
+    <td>19900101</td>
+    <td>333-333-3333</td>
+    <td>ex3@ex.com</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>TAKAHSI</td>
+    <td>19900101</td>
+    <td>444-444-4444</td>
+    <td>ex4@ex.com</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>TANAKA</td>
+    <td>19900101</td>
+    <td>555-555-5555</td>
+    <td>ex5@ex.com</td>
+  </tr>
+</table>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(function(){
+  $("tr").mouseover(function(){
+    $(this).addClass("hover");
+  }).mouseout(function(){
+    $(this).removeClass("hover");
+  });
+  $("td").mouseover(function(){
+    $("td:nth-child("+($("td").index(this)%$("th").length+1)+")")
+    .addClass("hover");
+  }).mouseout(function(){
+    $("td:nth-child("+($("td").index(this)%$("th").length+1)+")")
+    .removeClass("hover");
+  });
+});
+</script>
+<style>
+tr:nth-child(even){
+  background-color: #eee;
+}
+tr:nth-child(odd){
+  background-color: #ddd;
+}
+th{
+  background-color: #111;
+  color:#fff;
+}
+tr.hover{
+  background-color: #B2D8ff;
+}
+td.hover{
+  background-color: #B2D8ff;
+}
+</style>
