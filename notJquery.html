@@ -1,0 +1,30 @@
+<html>
+<div id="l-menu_bar">
+  ボタン
+</div>
+<div id="l-menu" class="l-menu-close">
+  <p>menu1</p>
+  <p>menu2</p>
+  <p>menu3</p>
+</div>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+var wrapper = document.getElementById('l-menu');
+var navBtn = document.getElementById('l-menu_bar');
+navBtn.addEventListener('click',navToggle);
+
+function navToggle(){
+  wrapper.classList.toggle('l-menu-open');
+}
+</script>
+<style>
+.l-menu-close{
+  display: none;
+}
+.l-menu-open{
+  display: block;
+}
+</style>
